@@ -526,6 +526,7 @@ a.back-to-top:hover, a.back-to-top:focus {
         position: absolute;
         padding: 15px;
         top: 0;
+        left: 0;
     }
 
     .navbar-brand img {
@@ -557,10 +558,11 @@ a.back-to-top:hover, a.back-to-top:focus {
 .intro {
     background: url(../img/background-area.jpg) no-repeat;
     background-size: cover;
+    background-position-x: center;
     color: #000000;
     padding: 150px 0;
     overflow: hidden;
-    position: relative
+    position: relative;
 }
 .intro .prototype{
     font-size: 25px;
@@ -1025,10 +1027,11 @@ a.back-to-top:hover, a.back-to-top:focus {
     height: 530px
 }
 #contact{
-    direction : ltr;
+    /*direction : ltr;*/
 }
 .contact-right {
-    padding-left: 5%
+    padding-left: 5%;
+    /*direction: rtl;*/
 }
 
 .contact-right .contact-box {
@@ -1287,4 +1290,7 @@ a.back-to-top:hover, a.back-to-top:focus {
 
 #copyright p a:hover {
     color: #00b9ff
+}
+.help-block{
+    color: rgba(255, 0, 27, 0.74);
 }

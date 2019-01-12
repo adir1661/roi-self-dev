@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="he">
 <head>
 
     <meta charset="utf-8">
@@ -286,50 +286,51 @@
         <div class="row justify-content-center">
             <div class="col-md-8 col-lg-8 col-xs-12 text-center">
                 <h6 class="subtitle">
-                    Connect With Us
+                    הרצאה בנושא התפתחות אישית
                 </h6>
                 <h2 class="section-title">
-                    Get in Touch
+                    להרשמה
                 </h2>
                 <div class="section-info">
-                    Lorem ipsum dolor sit amet, ut consul mediocrem abhorreant cum. Id eum dolores.
-                    Delicatissimi ne pri modo accusamus. Augue vitae primis antiopam nec ex rationibus.
+                    לצורך יעול ושיפור תכנים החלטנו לקחת צעד אחד קדימה את המערך ולשמור על יעילות מוגברת ולכן אנו דורשים הרשמה מוקדמת
                 </div>
             </div>
         </div>
         <div class="row">
-            <div class="col-md-8">
+            <div class="col-md-12">
                 <form role="form" method="post" id="contactForm" name="contact-form" data-toggle="validator">
                     <div class="row">
                         <div class="col-md-6 form-line">
                             <div class="form-group">
-                                <input type="text" class="form-control" id="name" name="name" placeholder="First Name"
-                                       required data-error="Please enter your name">
+                                <input type="text" class="form-control" id="name" name="name" placeholder="שם"
+                                       required data-error="נא למלאות את השדה הזה">
                                 <div class="help-block with-errors"></div>
                             </div>
                         </div>
                         <div class="col-md-6 form-line">
                             <div class="form-group">
-                                <input type="email" class="form-control" id="email" name="email" placeholder="Email"
-                                       required data-error="Please enter your Email">
+                                <input type="text" class="form-control" id="last" name="last" placeholder="משפחה"
+                                       required data-error="נא למלאות את השדה הזה">
                                 <div class="help-block with-errors"></div>
                             </div>
                         </div>
                         <div class="col-md-12 form-line">
                             <div class="form-group">
-                                <input type="tel" class="form-control" id="msg_subject" name="subject"
-                                       placeholder="Subject" required data-error="Please enter your message subject">
+                                <input type="email" class="form-control" id="email" name="email"
+                                       placeholder="דוא&quotל" required data-error="נא למלאות את השדה הזה">
                                 <div class="help-block with-errors"></div>
                             </div>
                         </div>
                         <div class="col-md-12">
                             <div class="form-group">
-                                <textarea class="form-control" rows="4" id="message" name="message" required
-                                          data-error="Write your message"></textarea>
+                                <textarea class="form-control" rows="4" id="message" name="message"
+                                          placeholder="רקע על עצמך (לא חובה)" data-error=" "></textarea>
+                            </div>
+                            <div id = "errors">
                             </div>
                             <div class="form-submit">
                                 <button type="submit" class="btn btn-common" id="form-submit"><i
-                                        class="fa fa-paper-plane" aria-hidden="true"></i> Send Message
+                                        class="fa fa-paper-plane" aria-hidden="true"></i> הרשמה
                                 </button>
                                 <div id="msgSubmit" class="h3 text-center hidden"></div>
                             </div>
@@ -338,24 +339,24 @@
                 </form>
             </div>
 
-            <div class="col-md-4 contact-right">
-                <div class="contact-box">
-                    <h4>Address</h4>
-                    <p>
-                        1900 Pico Blvd, New York <br> Centernial, colorado
-                    </p>
-                </div>
-                <div class="contact-box">
-                    <h4>Call Us</h4>
-                    <p>+48 123 456 789</p>
-                </div>
-                <div class="contact-box">
-                    <h4>Say Hello</h4>
-                    <p>
-                        <a href="#"><span class="__cf_email__" data-cfemail="83eaede5ecc3e6fbe2eef3efe6ade0ecee">[email&#160;protected]</span></a>
-                    </p>
-                </div>
-            </div>
+            <!--<div class="col-md-4 contact-right">-->
+                <!--<div class="contact-box">-->
+                    <!--<h4>Address</h4>-->
+                    <!--<p>-->
+                        <!--1900 Pico Blvd, New York <br> Centernial, colorado-->
+                    <!--</p>-->
+                <!--</div>-->
+                <!--<div class="contact-box">-->
+                    <!--<h4>Call Us</h4>-->
+                    <!--<p>+48 123 456 789</p>-->
+                <!--</div>-->
+                <!--<div class="contact-box">-->
+                    <!--<h4>Say Hello</h4>-->
+                    <!--<p>-->
+                        <!--<a href="#"><span class="__cf_email__" data-cfemail="83eaede5ecc3e6fbe2eef3efe6ade0ecee">[email&#160;protected]</span></a>-->
+                    <!--</p>-->
+                <!--</div>-->
+            <!--</div>-->
         </div>
     </div>
 </section>
@@ -410,6 +411,9 @@
 </div>
 
 
+<script src="https://www.gstatic.com/firebasejs/5.7.3/firebase.js"></script>
+<script src="https://www.gstatic.com/firebasejs/5.7.2/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/5.7.2/firebase-firestore.js"></script>
 <script data-cfasync="false" src="assets/js/email-decode.js"></script>
 <script src="assets/js/jquery-min.js"></script>
 <script src="assets/js/popper.min.js"></script>
