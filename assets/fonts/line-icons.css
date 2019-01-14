@@ -761,6 +761,7 @@
 .lni-menu:before {
     content: "\e9b9";
     font-weight: 700;
+    text-shadow: white 0 0 2px;
 }
 
 .lni-mic:before {

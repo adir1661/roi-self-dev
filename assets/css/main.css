@@ -761,6 +761,15 @@ a.back-to-top:hover, a.back-to-top:focus {
     width: 100%
 }
 
+.submit-div{
+    float: right;
+}
+.inform-subscribe{
+    color:rgba(255,1,0,0.76);
+}
+.hidden-sub{
+    display: none;
+}
 .subscribe-form h4 {
     font-size: 18px;
     margin-bottom: 30px;
