@@ -12,13 +12,15 @@ $(function () {
     $(form).submit(function (event) {
         // Stop the browser from submitting the form.
         event.preventDefault();
+
         var emailData = email.val();
         var phoneData = phone.val();
         var lastData = last.val();
         var messageData = message.val();
         var nameData = name.val();
         if (formValidate(email,last,name)) {
-
+            let animation = $(".lds-hourglass");
+            animation.fadeIn(1000);
             db.collection("signs").add({
                 created: firebase.firestore.FieldValue.serverTimestamp(),
                 email: emailData,
@@ -29,7 +31,10 @@ $(function () {
             })
                 .then(function (docRef) {
                     console.log("Document written with ID: ", docRef.id);
-                    $(".inform-subscribe").removeClass("hidden-sub");
+                    animation.fadeOut(1000,function() {
+                        $(".inform-subscribe").removeClass("hidden-sub");
+                        form[0].reset();
+                    })
                 })
                 .catch(function (error) {
                     console.error("Error adding document: ", error);
