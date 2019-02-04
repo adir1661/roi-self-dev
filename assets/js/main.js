@@ -18,7 +18,7 @@
             closedSymbol: '<i class="icon-arrow-right"></i>',
             openedSymbol: '<i class="icon-arrow-down"></i>',
         });
-        jQuery('#clock').countdown('2019/02/06', function (event) {
+        jQuery('#clock').countdown('2019/02/13', function (event) {
             var $this = jQuery(this).html(event.strftime(''
                 + '<div class="time-entry days"><span>%-D</span> ימים</div> '
                 + '<div class="time-entry hours"><span>%H</span> שעות</div> '
@@ -42,6 +42,30 @@
             $('html, body').animate({scrollTop: 0}, 600);
             return false;
         });
+        var video = $(".video");
+        video.load();
+        video.prop("volume", 0.5);
+
+        setTimeout(function () {
+            video.get(0).play()
+                .catch(function (err) {
+                console.log("video play error:", err.message)
+            });
+        },2000)
+        $("#exit-vid").click(function (ev) {
+            video.get(0).pause();
+            var vidCon = $(".video-container");
+            $(this).hide();
+            vidCon.animate({
+                left: vidCon.width()/2,
+                bottom: vidCon.height()/2,
+                opacity: '0',
+                height: '0',
+                width: '0'
+            },function () {
+                $(".row.vid-fixed").remove();
+            });
+        })
     });
 }(jQuery));
 // Initialize Firebase
